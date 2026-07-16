@@ -79,8 +79,8 @@ public class Main extends ApplicationAdapter {
 
 
     //El personaje mide 50 de ancho por 70 de alto
-    private float ancho = 90;
-    private float altoNormal = 200;
+    private float ancho = 100;
+    private float altoNormal = 300;
     //tamaño del personaje al agacharse
     private float altoCrouch = 70;
 
@@ -91,8 +91,8 @@ public class Main extends ApplicationAdapter {
     // CONSTANTES DE FÍSICA
     // =====================================================
 
-    private static final float GRAVEDAD = -200f;
-    private static final float VELOCIDAD_SALTO = 250f;
+    private static final float GRAVEDAD = -800f;
+    private static final float VELOCIDAD_SALTO = 520f;
 
     // =====================================================
     // CONTROL DE SALTO
@@ -189,8 +189,8 @@ public class Main extends ApplicationAdapter {
 
         personajeCrouch = new Texture[2];
 
-        personajeCrouch[0] = new Texture("characters/player/guardian/crouch/crouch_1.png");
-        personajeCrouch[1] = new Texture("characters/player/guardian/crouch/crouch_2.png");
+        personajeCrouch[0] = new Texture("characters/player/guardian/crouch/crouch_1.jpg");
+        personajeCrouch[1] = new Texture("characters/player/guardian/crouch/crouch_2.jpg");
 
         // ---------------------------------------------
         // Texturas de bloques
@@ -198,10 +198,10 @@ public class Main extends ApplicationAdapter {
 
         bloques = new Texture[4];
 
-        bloques[0] = new Texture("blocks/block_1.png");
-        bloques[1] = new Texture("blocks/block_2.png");
-        bloques[2] = new Texture("blocks/block_3.png");
-        bloques[3] = new Texture("blocks/block_4.png");
+        bloques[0] = new Texture("blocks/block_1.jpg");
+        bloques[1] = new Texture("blocks/block_2.jpg");
+        bloques[2] = new Texture("blocks/block_3.jpg");
+        bloques[3] = new Texture("blocks/block_4.jpg");
 
         personajeActual = personajeWalk[0];
 
@@ -218,10 +218,10 @@ public class Main extends ApplicationAdapter {
         btnAbajoInactivo = new Texture("buttons/abajo_inactivo.png");
 
         // Regiones táctiles para los dedos pulgares (tamaño 160x160)
-        rectBtnIzquierda = new Rectangle(80, 80, 160, 160);
-        rectBtnDerecha = new Rectangle(280, 80, 160, 160);
-        rectBtnAbajo = new Rectangle(1360, 80, 160, 160);
-        rectBtnArriba = new Rectangle(1560, 240, 160, 160);
+        rectBtnIzquierda = new Rectangle(80, 80, 180, 200);
+        rectBtnDerecha = new Rectangle(280, 80, 180, 200);
+        rectBtnAbajo = new Rectangle(1360, 80, 180, 200);
+        rectBtnArriba = new Rectangle(1560, 240, 180, 200);
 
         inicializarPlataformas();
     }
@@ -242,16 +242,16 @@ public class Main extends ApplicationAdapter {
 
         // Bloques elevados
 
-        plataformas.add(new Rectangle(700, 400, 60, 70));
+        plataformas.add(new Rectangle(600, 300, 100, 210));
         plataformasTipo.add(0);
 
-        plataformas.add(new Rectangle(800, 450, 60, 70));
+        plataformas.add(new Rectangle(800, 350, 100, 220));
         plataformasTipo.add(1);
 
-        plataformas.add(new Rectangle(900, 500, 60, 70));
+        plataformas.add(new Rectangle(1000, 400, 100, 220));
         plataformasTipo.add(2);
 
-        plataformas.add(new Rectangle(1000, 370, 60, 70));
+        plataformas.add(new Rectangle(1200, 270, 100, 230));
         plataformasTipo.add(3);
     }
 
